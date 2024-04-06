@@ -34,7 +34,12 @@ export default defineNuxtConfig({
       meta: [{ charset: 'utf-8' }], // defaulted by nuxt
     },
   },
-
+  runtimeConfig: {
+    apiSecret: '', // can be overridden by NUXT_API_SECRET environment variable
+    public: {
+      BACKEND_URL: process.env.BACKEND_URL, // can be overridden by NUXT_PUBLIC_API_BASE environment variable
+    },
+  },
   modules: [
     '@pinegrow/nuxt-module',
     '@unocss/nuxt',
@@ -44,6 +49,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     // '@nuxtjs/html-validator',
     '@nuxt/image',
+    'nuxt-multi-tenancy',
     '@vee-validate/nuxt',
     'vuetify-nuxt-module',
     '@nuxtseo/module',
@@ -79,7 +85,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
+  multiTenancy: {
+    tenantDynamicRoute: 'site',
+    rootDomains: ['nuxtdev.local', 'nuxtdev.xyz'],
+  },
   // Vuetify Nuxt module, thanks Joaquín (userquin)
   vuetify: {
     moduleOptions: {
