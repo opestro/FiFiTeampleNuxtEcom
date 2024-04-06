@@ -87,7 +87,7 @@ export default defineNuxtConfig({
   },
   multiTenancy: {
     tenantDynamicRoute: 'site',
-    rootDomains: ['nuxtdev.local', 'nuxtdev.xyz'],
+    rootDomains: ['localhost', 'khfif.shop'],
   },
   // Vuetify Nuxt module, thanks Joaquín (userquin)
   vuetify: {
