@@ -7,7 +7,6 @@ COPY . .
 RUN npm install
 RUN npm run build
 EXPOSE 3000
-EXPOSE 3000
 
 # Set NuxtJS system variables so the application can be reached on your network
 ENV NUXT_HOST=0.0.0.0
