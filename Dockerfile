@@ -3,7 +3,6 @@ FROM node:20.9.0
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci && npm cache clean --force
 ADD . /app
 RUN npm run build
 ENV HOST 0.0.0.0
