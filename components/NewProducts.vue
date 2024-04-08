@@ -1,4 +1,6 @@
 <script setup>
+import ProductCard from './ProductCard.vue';
+
 const route = useRoute()
 const { category } = route.params
 const props = defineProps({
@@ -16,7 +18,7 @@ const products = props.products
 
       </div>
       <section data-pg-name="Products" class="flex flex-wrap justify-center mt-8 gap-2">
-        <ProductCard :products="products" />
+        <ProductCard :products="products"></ProductCard>
       </section>
     </v-container>
   </div>

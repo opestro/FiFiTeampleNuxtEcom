@@ -1,8 +1,10 @@
-export const useProduct = async (productId: number) => {
+export const useProduct = async (productSlug: string) => {
   // const { data, error } = await useFetch(
   //   `/api/store/external-data/${productId}`)
+  const config = useRuntimeConfig()
+  const url = config.public.BACKEND_URL
   const { data: product, error } = await useFetch(
-    `/api/store/local-data/${productId}`,
+    url + '/products/' + productSlug + '?by=slug',
   )
 
   /* The above useFetch is a syntactic sugar of the below useAsyncData & $fetch combo */
@@ -11,23 +13,12 @@ export const useProduct = async (productId: number) => {
   // })
 
   if (error.value) {
+    console.error(productSlug)
     throw createError({
       ...error.value,
-      statusMessage: `Couldn't fetch product id ${productId}.`,
+      statusMessage: `Couldn't fetch product id ${productSlug}.`,
     })
   }
 
-  const fetchProduct = () => {
-    // Optimize any image urls in the data contents
-    const { optimizeImage } = useOptimizeImage()
-
-    return product.value.image
-      ? {
-          ...product.value,
-          imageOptimized: optimizeImage(product.value.image),
-        }
-      : product.value
-  }
-
-  return { product, fetchProduct }
+  return { product }
 }
