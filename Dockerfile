@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 COPY . .
 RUN npm install
-RUN npm run build
+RUN npm run start
 EXPOSE 3000
 
 # Set NuxtJS system variables so the application can be reached on your network
