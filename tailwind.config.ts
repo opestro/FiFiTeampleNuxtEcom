@@ -3,7 +3,6 @@ import {
   pg_fonts,
   pg_backgrounds,
 } from './themes/pg-tailwindcss/tokens.cjs'
-
 import { getFontsWithFallback } from './utils/font'
 
 export default {
@@ -18,6 +17,9 @@ export default {
       backgrounds: pg_backgrounds, // bg-design-image, bg-design-image-large
     }),
   ],
+  theme: {
+    borderRadius: {},
+  },
 
   get content() {
     const _content = [

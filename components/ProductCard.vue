@@ -8,28 +8,43 @@ const products = props.products
 </script>
 <template>
   <div v-for="product in products" :key="product">
-    <NuxtLink :to="'/product/' + product.slug">
-      <v-card border variant="outlined" class="md:h-full  max-w-xs ">
-        <div class="h-64 relative">
-          <div class="-m-4 bg-white rounded-lg">
 
-            <img :src="product.photoUrl" class="w-full" />
+
+    <v-card border variant="" class="md:h-full  max-w-xs rounded-md">
+      <NuxtLink :to="'/product/' + product.slug">
+        <div class="h-64  ">
+
+          <div class="-m-4 bg-white ">
+
+            <img :src="product.photoUrl" class="" />
 
           </div>
+
         </div>
-        <v-card-text class="mt-14 ">
-          <div>
-            <span class="text-base">{{ product.name }}</span> <br>
-            <span class=" text-sm">{{ product.description }}</span>
-            <div class="flex font-medium items-center justify-between mt-4">
-              <span class="font-bold text-base">${{ product.price }}</span>
-              <v-chip v-if="shipping" class="dark:text-primary-400 text-primary-500 text-xs" size="small"
-                color="primary">{{ product.shipping }}</v-chip>
+      </NuxtLink>
+      <v-card-text class=" ">
+
+        <div class=" grid grid-cols-4  ">
+          <div class=" col-span-3  ">
+            <span class="text-base font-medium">{{ product.name }} </span> <br>
+            <span class="font-bold text-base">${{ product.price }}</span>
+            <div class="text-xs truncate">
+              {{ product.description }}
             </div>
           </div>
-        </v-card-text>
-      </v-card>
-    </NuxtLink>
+          <div class=" col-span-1  items-center flex justify-center">
+            <button class=" w-12 h-12 rounded-circle bg-black">></button>
+          </div>
+
+
+
+
+
+        </div>
+      </v-card-text>
+      <button class="  bg-black p-1  text-white w-full ">Buy Now</button>
+    </v-card>
+
   </div>
 
 </template>

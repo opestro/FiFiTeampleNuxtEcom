@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     // Look into HeadAndMeta.vue for the rest
     head: {
       meta: [{ charset: 'utf-8' }], // defaulted by nuxt
+      bodyAttrs: {},
     },
   },
   runtimeConfig: {
@@ -283,7 +284,6 @@ export default defineNuxtConfig({
       }),
     ],
   },
-
   pinegrow: {
     liveDesigner: {
       iconPreferredCase: 'unocss', // default value (can be removed), vuetify-nuxt-module uses the unocss format for icon names

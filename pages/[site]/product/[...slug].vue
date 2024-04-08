@@ -49,8 +49,8 @@ const selected = ref(colors[0])
 <template>
   <section class="mx-4 my-16 product-details">
     <div class="flex justify-center max-h-96 xl:max-h-[600px]">
-      <div class="-m-4 bg-white p-8 rounded-lg w-full">
-        <v-img v-if="product.photoUrl" :src="product.photoUrl" class="max-h-full" />
+      <div class="-m-4 bg-white rounded-2xl w-full">
+        <v-img v-if="product.photoUrl" :src="product.photoUrl" class="max-h-full " />
         <v-img v-else :src="image" class="max-h-full"></v-img>
       </div>
     </div>
@@ -87,7 +87,7 @@ const selected = ref(colors[0])
           </v-select>
         </div>
         <div class="flex mt-4 w-full">
-          <v-btn-square label="Add To Cart" class="rounded-lg" size="x-large" block>
+          <v-btn-square label="Add To Cart" class="" size="x-large" block>
             <span class="py-2 lg:text-lg">Add To Cart</span>
           </v-btn-square>
         </div>
