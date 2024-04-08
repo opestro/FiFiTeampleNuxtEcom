@@ -4,7 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 COPY . .
-RUN npm run build
+RUN npm install
+RUN npm build
 ENV HOST 0.0.0.0
 EXPOSE 3000
-ENTRYPOINT ["node", ".output/server/index.mjs"]
+
+
+CMD [ "npm", "run", "start" ]
