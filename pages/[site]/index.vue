@@ -36,7 +36,7 @@ const heroImageOptimized = {
 }
 const heroImage = heroImageOptimized.src
 const bgStyles = heroImageOptimized.bgStyles
-let products = ref()
+const products = ref()
 try {
   const productsFetch = await useFetch(url + '/products?store_id=' + fetchStore.storeData.id)
   console.log(productsFetch.data.value)

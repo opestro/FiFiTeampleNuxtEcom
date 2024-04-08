@@ -14,7 +14,7 @@ export const useFetchStore = defineStore('store', {
       const config = useRuntimeConfig()
       const url = config.public.BACKEND_URL
       try {
-        const siteFetch = await useFetch(url + '/stores/' + tenant)
+        const siteFetch = await useFetch(url + '/stores/' + tenant + '?by=slug')
         console.log(siteFetch.data.value)
         this.storeData = siteFetch.data.value
       } catch (err) {
