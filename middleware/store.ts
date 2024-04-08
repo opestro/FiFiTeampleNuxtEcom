@@ -15,5 +15,4 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
   // Attempt to fetch user data from Appwrite session on server-side
 
   // Redirect to login page if not authenticated
-  return navigateTo('/error')
 })
