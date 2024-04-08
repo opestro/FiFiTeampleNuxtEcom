@@ -1,10 +1,8 @@
 // since `.js, .ts` files are not included by default,
 // the following comment tells UnoCSS to force scan this file (to pick the logo icon).
 // @unocss-include
-import { useFetchStore } from '@/stores/store'
-const useStore = useFetchStore()
 export default {
-  name: useStore.storeData.name,
+  name: 'VuCommerce',
   description: 'Vue Designer Nuxt Vuetify Tailwind CSS',
   logo: 'i-fluent-emoji:shopping-bags',
   author: 'Pinegrow',
