@@ -59,7 +59,7 @@ try {
       <!--  <LaunchSale class="mt-8" /> -->
       <NewProducts class="mt-8" :products="products" />
     </div>
-    {{ products }}
+    <!-- {{ products }} -->
   </div>
 </template>
 <style scoped></style>
