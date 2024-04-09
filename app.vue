@@ -63,19 +63,18 @@
   }
 
   const theOgImage = theOgImageOptimized.src
-</script>
-<template>
-  <div>
-    <HeadAndMeta />
-    <!-- We pass image separately so that alias can be transformed by vue plugin, see vite.vue.template.transformAssetUrls in nuxt.config.ts -->
-    <OgImage :image="theOgImage" v-bind="ogImageOptions" />
-    <NuxtLoadingIndicator />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
-</template>
-
+</script> 
+<template> 
+    <div> 
+        <HeadAndMeta/> 
+        <!-- We pass image separately so that alias can be transformed by vue plugin, see vite.vue.template.transformAssetUrls in nuxt.config.ts -->         
+        <OgImage :image="theOgImage" v-bind="ogImageOptions"/> 
+        <NuxtLoadingIndicator/> 
+        <NuxtLayout> 
+            <NuxtPage/> 
+        </NuxtLayout>         
+    </div>     
+</template> 
 <style lang="scss">
   // @use '~/assets/vuetify/settings';
   // .my-button {

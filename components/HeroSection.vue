@@ -30,10 +30,11 @@ const bgStyles = heroImageOptimized.bgStyles
       <!-- <v-img :src="heroImageUrl" :max-height="800" cover> -->
       <div class="container flex flex-col h-full justify-center mx-auto">
         <div class="flex flex-col items-center pb-8 px-4 w-full md:pb-20">
-          <h2 class="capitalize font-serif leading-tight mb-2 md:w-96 text-primary text-center w-60 xl:w-full">
-            Style Up Your Life!
+          <h2 class="capitalize  leading-tight mb-2 md:w-96 text-black text-center w-60 xl:w-full">
+            منتوجات عصرية
           </h2>
-          <v-btn text="Shop Now" variant="elevated" size="large" class="mt-4" to="/women"></v-btn>
+          <v-btn text="تسوق الأن" variant="elevated" size="large" class="mt-4 bg-primary-500 text-white"
+            to="/women"></v-btn>
         </div>
       </div>
     </v-img>
