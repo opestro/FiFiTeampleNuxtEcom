@@ -10,7 +10,7 @@ const products = props.products
   <div v-for="product in products" :key="product">
 
 
-    <v-card border variant="" class="md:h-full  max-w-xs rounded-md">
+    <v-card border variant="" class="md:h-full  max-w-xs rounded-lg">
       <NuxtLink :to="'/product/' + product.slug">
         <div class="h-64  ">
 

@@ -45,10 +45,12 @@ const { isMobileMenuOpen } = useMobileMenu()
         </v-menu>
       </div>
     </nav>
+
     <v-navigation-drawer v-model="isMobileMenuOpen" name="drawer" data-pg-name="NavSecondary"
-      style="grid-area: primary-nav" class="w-80 md:hidden" location="left" temporary>
+      style="grid-area: primary-nav" class="w-80 md:hidden" location="right" temporary>
       <NavPrimary class="m-4" />
     </v-navigation-drawer>
+
   </div>
 </template>
 <style scoped>

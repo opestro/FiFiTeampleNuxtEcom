@@ -9,6 +9,9 @@
 }
 
 @layer base {
+  html {
+    font-family: "Cairo", system-ui, sans-serif;
+  }
   h1 {
     @apply text-4xl font-bold md:text-5xl lg:text-6xl  tracking-tight;
   }

@@ -60,7 +60,7 @@ export default defineNuxtConfig({
   ],
   // https://dev.to/jacobandrewsky/improving-performance-of-nuxt-with-fontaine-5dim
   fontMetrics: {
-    fonts: ['Inter', 'Kalam'],
+    fonts: ['Tajawal'],
   },
 
   // https://dev.to/jacobandrewsky/optimizing-css-performance-in-nuxt-with-critters-4k8i
